@@ -9,7 +9,7 @@ QBCore.UsableItems = {}
 -- ex: local example = player.Functions.functionname(parameter)
 
 ---Gets the coordinates of an entity
----@param entity number
+---@param entity numbe
 ---@return vector4
 function QBCore.Functions.GetCoords(entity)
     local coords = GetEntityCoords(entity, false)
@@ -395,9 +395,9 @@ function QBCore.Functions.CreateVehicle(source, model, vehtype, coords, warp)
 end
 
 function PaycheckInterval()
-    if not next(QBCore.Players) then 
+    if not next(QBCore.Players) then
         SetTimeout(QBCore.Config.Money.PayCheckTimeOut * (60 * 1000), PaycheckInterval) -- Prevent paychecks from stopping forever once 0 players
-        return 
+        return
     end
     for _, Player in pairs(QBCore.Players) do
         if not Player then return end
