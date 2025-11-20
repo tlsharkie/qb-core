@@ -181,3 +181,5 @@ QBShared.FemaleNoGloves = {
 function GetShared(namespace, item)
     return QBCore.Shared[namespace]?[item]
 end
+
+exports('GetShared', GetShared)
