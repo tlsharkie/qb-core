@@ -179,5 +179,5 @@ QBShared.FemaleNoGloves = {
 --- @param item string
 --- @return table
 function GetShared(namespace, item)
-    return QBCore.Shared[namespace][item]
+    return QBCore.Shared[namespace]?[item]
 end
